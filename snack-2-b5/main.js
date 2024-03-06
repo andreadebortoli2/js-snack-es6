@@ -59,11 +59,11 @@ const zucchine = [
     },
 ];
 
-/* const shortZucchine = zucchine.filter(zucchina => zucchina.lunghezza <= 15);
-console.log(shortZucchine); */
+const shortZucchine = zucchine.filter(zucchina => zucchina.lunghezza <= 15);
+console.log(shortZucchine);
 
-/* const longZucchine = zucchine.filter(zucchina => zucchina.lunghezza > 15);
-console.log(longZucchine); */
+const longZucchine = zucchine.filter(zucchina => zucchina.lunghezza > 15);
+console.log(longZucchine);
 
 let shortZucchineWeight = 0;
 let longZucchineWeight = 0; 
@@ -78,7 +78,7 @@ let longZucchineWeight = 0;
 
 
 // short version
-zucchine.forEach(zucchina => zucchina.lunghezza <= 15 ? shortZucchineWeight += zucchina.lunghezza : longZucchineWeight += zucchina.lunghezza)
+zucchine.forEach(zucchina => zucchina.lunghezza <= 15 ? shortZucchineWeight += zucchina.lunghezza : longZucchineWeight += zucchina.lunghezza);
 
 console.log(shortZucchineWeight);
 console.log(longZucchineWeight);
