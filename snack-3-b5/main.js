@@ -4,6 +4,16 @@
 
 const word = 'ciao';
 
-const wordReverse = word.split('').reverse().join('')
+const wordReverse = word.split('').reverse().join('');
 
 console.log(wordReverse);
+
+
+// as a function
+
+function reverseTheWord(params) {
+    const reversedWord = params.split('').reverse().join('');
+    console.log(reversedWord);
+};
+
+reverseTheWord('ciao');
