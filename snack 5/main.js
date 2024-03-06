@@ -36,16 +36,16 @@ let lightestBike;
 
 bikes.forEach((bike) => {
 
-    const { name, weight } = bike
+    const { name, weight } = bike;
 
     /* if (weight < lightestWeight) {
         lightestWeight = weight;
         lightestBike = name;
     }; */
 
-    weight < lightestWeight ? (lightestWeight = weight, lightestBike = name) : ''
+    weight < lightestWeight ? (lightestWeight = weight, lightestBike = name) : '';
 
 });
 
 
-console.log(`the lightest bike is ${lightestBike}, with the weight of ${lightestWeight} kg`);
+console.log(`the lightest bike is the ${lightestBike}, with the weight of ${lightestWeight} kg`);

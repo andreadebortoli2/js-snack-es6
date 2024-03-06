@@ -7,6 +7,9 @@ Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
 Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
 Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+*BONUS*
+Stampare in pagina oltre che in console!
 */
 
 const soccerTeamsList = [
@@ -66,6 +69,20 @@ console.log(editedSoccerTeamsList);
 }); */
 
 // short version
-const shortEditedSoccerTeamsList = editedSoccerTeamsList.map(({name, fouls}) => ({name, fouls}));
+const shortEditedSoccerTeamsList = editedSoccerTeamsList.map(({ name, fouls }) => ({ name, fouls }));
 
 console.log(shortEditedSoccerTeamsList);
+
+
+// BONUS
+
+const unorderedList = document.querySelector('ul');
+
+/* for (let i = 0; i < shortEditedSoccerTeamsList.length; i++) {
+    const team = shortEditedSoccerTeamsList[i];
+    const listItem = document.createElement('li');
+    unorderedList.appendChild(listItem).innerText = `Team name: ${team.name}, fouls: ${team.fouls}`;
+}; */
+
+// one-liner version
+shortEditedSoccerTeamsList.forEach(team => unorderedList.appendChild(document.createElement('li')).innerText = `Team name: ${team.name}, fouls: ${team.fouls}`);
